@@ -26,8 +26,13 @@ class GameObjectFactory {
  	void clear();
 
 	static GameObjectFactory* get();
+	// Add custom object generator
 	void add(unsigned int object_id, generator_t gen);
+	// Add custom object generator with custom texture
 	void add(unsigned int object_id, std::string txt, generator_t gen);
+	// Assign texture for object
 	void addTexture(unsigned int object_id, std::string txt);
+
+	// At runtime, add custom object
 	void addContainer(unsigned int uuid, container_t container);
 };
