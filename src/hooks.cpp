@@ -101,11 +101,11 @@ class $modify(GameObjectHook, GameObject) {
 };
 
 class $modify(PlayerObject) {
-	void collidedWithObject(float dt, GameObject* obj) {
+	void collidedWithObject(float dt, GameObject* obj, CCRect r) {
 		if (auto mg = GameObjectFactory::get()->fetch(obj)) {
 			mg.value()->onCollide(dt, this);
 		} else {
-			PlayerObject::collidedWithObject(dt, obj);
+			PlayerObject::collidedWithObject(dt, obj, r);
 		}
 	}
 };
