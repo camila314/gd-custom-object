@@ -1,7 +1,10 @@
-#include <Geode.hpp>
+#include <Geode/modify/GameObject.hpp>
+#include <Geode/modify/PlayerObject.hpp>
+#include <Geode/modify/GJBaseGameLayer.hpp>
+#include <Geode/modify/CCSprite.hpp>
 #include <GameObjectFactory.hpp>
 
-USE_GEODE_NAMESPACE();
+using namespace geode::prelude;
 
 using namespace cocos2d;
 
@@ -108,10 +111,10 @@ class $modify(PlayerObject) {
 };
 
 class $modify(GJBaseGameLayer) {
-	field<CCDictionaryExt<int, CCNode>> m_effectLayerMap;
+	CCDictionaryExt<int, CCNode> m_effectLayerMap;
 
 	CCNode* parentForZLayer(int zLayer, bool detailChannel, int batchLayer) {
-		auto elm = this->*m_effectLayerMap;
+		auto elm = m_fields->m_effectLayerMap;
 
 		if (batchLayer == -2) { // -2 is the effect layer
 		    if (elm.size() == 0) {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Geode.hpp>
+#include <Geode/Geode.hpp>
 #include <map>
 #include <optional>
 #include <functional>

@@ -1,9 +1,9 @@
 {
-	"geode": "v0.2.0",
+	"geode": "v1.0.0-beta.17",
 	"version": "v1.0.0",
 	"id": "com.camila.objectapi",
 	"name": "Custom Objects",
 	"developer": "camila",
 	"description": "library for custom objects api",
-	"binary": "CustomObjects",
+	"binary": "CustomObjects"
 }

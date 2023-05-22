@@ -1,7 +1,7 @@
-#include <Geode.hpp>
+#include <Geode/Geode.hpp>
 #include <GameObjectFactory.hpp>
 
-USE_GEODE_NAMESPACE();
+using namespace geode::prelude;
 
 using namespace cocos2d;
 
